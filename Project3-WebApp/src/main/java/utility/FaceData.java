@@ -1,4 +1,6 @@
-package server;
+package utility;
+
+import server.FaceAffectiveData;
 
 public class FaceData {
 	FaceExpressionData faceExpressionData;
