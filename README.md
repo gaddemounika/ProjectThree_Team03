@@ -9,6 +9,7 @@
 5. Vivek Faldu (31, vivek.faldu@asu.edu)
 6. Yathartha Goel (33, ygoel@asu.edu)
 7. Mahima Gupta (35, mrgupta3@asu.edu)
-8. Shubhangi Gupta(37,sgupt170@asu.edu)
-9. Srajan Gupta (38, sgupt182@asu.edu)
+8. Rahul Gupta (36, rgupta65@asu.edu)
+9. Shubhangi Gupta(37,sgupt170@asu.edu)
+10. Srajan Gupta (38, sgupt182@asu.edu)
 
