@@ -453,4 +453,8 @@ public class ServerGui extends Thread implements ActionListener{
 		//System.out.println(faceExpressionData.toString());
 		
 	}
+
+	public FaceData respondTo(FaceData request) {
+		return request;
+	}
 }
