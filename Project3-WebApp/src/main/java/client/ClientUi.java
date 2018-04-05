@@ -27,9 +27,12 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
+
 import javax.websocket.ContainerProvider;
 import javax.websocket.DeploymentException;
 import javax.websocket.WebSocketContainer;
+import client.ColorSelectorButton.ColorChangedListener;
+
 
 /**
  * @SER516 Project3_Team03
@@ -328,6 +331,19 @@ public class ClientUi {
 
 		final JPanel colPanel = new JPanel();
 		colPanel.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
+		ColorSelectorButton colorChooser = new ColorSelectorButton(Color.WHITE);
+
+
+		
+		colorChooser.addColorChangedListener(new ColorChangedListener() {
+
+		    public void colorChanged(Color newColor) {
+		            // do something with newColor ...
+		    		System.out.println("New Color is selected!");
+		    	
+		    }
+		});
+		colPanel.add(colorChooser);
 		colPanel.setBounds(350, 30, 343, 311);
 		affectivePanel.add(colPanel);
 
