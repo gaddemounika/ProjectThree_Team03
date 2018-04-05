@@ -137,6 +137,8 @@ public class FaceExpressionData {
 		// p[10] = getWinkRight();
 		// p[11] = getLookLeft();
 		// p[12] = getLookRight();
+
+		// these are mock values, will be removed when websocket implementation is done.
 		double[] p = { 0.0345, 0.678, 0.467678, 0.6788, 0.567, 0.6788, 0.67868, 0.7989, 0.6878, 0.79879, 0.7898, 0.79,
 				0.890 };
 

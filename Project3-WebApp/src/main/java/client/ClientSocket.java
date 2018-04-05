@@ -49,13 +49,11 @@ public class ClientSocket {
 			throws JSONException, JsonParseException, JsonMappingException, IOException {
 		System.out.println("Message received from server:" + message);
 		JSONObject obj = new JSONObject(message);
-		JSONObject dataObj = obj.getJSONObject("data");
+		JSONObject faceExpressionData = obj.getJSONObject("faceExpressionData");
+		JSONObject faceAffectiveData = obj.getJSONObject("faceAffectiveData");
 		ObjectMapper m = new ObjectMapper();
-		if (obj.getString("action").equals("faceExpressionData"))
-			this.faceExpressionData = m.readValue(dataObj.toString(), FaceExpressionData.class);
-
-		if (obj.getString("action").equals("faceData"))
-			this.faceData = m.readValue(dataObj.toString(), FaceData.class);
+		this.faceExpressionData = m.readValue(faceExpressionData.toString(), FaceExpressionData.class);
+		this.faceData = m.readValue(faceAffectiveData.toString(), FaceData.class);
 
 	}
 
