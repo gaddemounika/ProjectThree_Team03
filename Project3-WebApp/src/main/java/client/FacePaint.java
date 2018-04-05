@@ -56,7 +56,7 @@ public class FacePaint extends JPanel {
 	public void drawFace(Graphics g, int x, int y, int height, int width) {
 		// FaceExpressionData f = ClientSocket.getInstance().getFaceExpressionData();
 		FaceExpressionData f = new FaceExpressionData();
-		double[] v = f.getVectors();
+		double[] v = f.fetchVectors();
 		System.out.println(v);
 		String direction = "Center";
 		boolean blinkl = true;

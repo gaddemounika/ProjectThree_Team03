@@ -123,7 +123,7 @@ public class FaceExpressionData {
 		this.eyeReset = eyeReset;
 	}
 
-	public double[] fetchVector() {
+	public double[] fetchVectors() {
 		// Double[] p = new Double[13];
 		// p[1] = getRaiseBrow();
 		// p[2] = getFurrowBrow();
