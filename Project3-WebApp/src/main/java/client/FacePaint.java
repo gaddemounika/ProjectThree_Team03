@@ -5,6 +5,8 @@ import java.awt.Graphics;
 
 import javax.swing.JPanel;
 
+import utility.FaceExpressionData;
+
 /**
  * Class to draw a face and represent the facial expressions.
  * 
@@ -52,7 +54,10 @@ public class FacePaint extends JPanel {
 	 *            Specifies the width of the window
 	 */
 	public void drawFace(Graphics g, int x, int y, int height, int width) {
-		int[] v = ClientSocket.getInstance().getFaceExpressionData().getVectors();
+		// FaceExpressionData f = ClientSocket.getInstance().getFaceExpressionData();
+		FaceExpressionData f = new FaceExpressionData();
+		double[] v = f.getVectors();
+		System.out.println(v);
 		String direction = "Center";
 		boolean blinkl = true;
 		boolean blinkr = false;

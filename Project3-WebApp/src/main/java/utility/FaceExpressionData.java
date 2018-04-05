@@ -16,6 +16,9 @@ public class FaceExpressionData {
 	Double lookRight = 0.0;
 	Boolean eyeReset = false;
 
+	public FaceExpressionData() {
+	}
+
 	public Double getRaiseBrow() {
 		return raiseBrow;
 	}
@@ -120,22 +123,24 @@ public class FaceExpressionData {
 		this.eyeReset = eyeReset;
 	}
 
-	public int[] getVectors() {
-		Double[] p = new Double[13];
-		p[1] = getRaiseBrow();
-		p[2] = getFurrowBrow();
-		p[3] = getSmile();
-		p[4] = getClench();
-		p[5] = getSmirkLeft();
-		p[6] = getSmirkRight();
-		p[7] = getLaugh();
-		p[8] = getBlink();
-		p[9] = getWinkLeft();
-		p[10] = getWinkRight();
-		p[11] = getLookLeft();
-		p[12] = getLookRight();
+	public double[] getVectors() {
+		// Double[] p = new Double[13];
+		// p[1] = getRaiseBrow();
+		// p[2] = getFurrowBrow();
+		// p[3] = getSmile();
+		// p[4] = getClench();
+		// p[5] = getSmirkLeft();
+		// p[6] = getSmirkRight();
+		// p[7] = getLaugh();
+		// p[8] = getBlink();
+		// p[9] = getWinkLeft();
+		// p[10] = getWinkRight();
+		// p[11] = getLookLeft();
+		// p[12] = getLookRight();
+		double[] p = { 0.0345, 0.678, 0.467678, 0.6788, 0.567, 0.6788, 0.67868, 0.7989, 0.6878, 0.79879, 0.7898, 0.79,
+				0.890 };
 
-		return null;
+		return p;
 	}
 
 	@Override
