@@ -30,6 +30,8 @@ import javax.swing.SpringLayout;
 import javax.swing.UIManager;
 import javax.swing.border.MatteBorder;
 
+import org.json.JSONObject;
+
 import utility.FaceData;
 import utility.FaceExpressionData;
 
@@ -357,8 +359,9 @@ public class ServerGui extends Thread implements ActionListener {
 	public void run() {
 		while (running) {
 			FaceData faceData = getInputs();
-			// convert faceData to JSON and send to client
-			//
+			JSONObject faceDataJson = new JSONObject(faceData);
+			String jsonResponse = faceDataJson.toString();
+			System.out.println(jsonResponse);
 			try {
 				Thread.sleep((long) (emoIntervalSelected * 1000));
 				timeElapsed += emoIntervalSelected;
@@ -381,7 +384,7 @@ public class ServerGui extends Thread implements ActionListener {
 		// System.out.println("UpperFace: " + upperFace);
 		// System.out.println("Upperface value: "+upperFaceValue);
 
-		switch (upperFace) {
+		switch (upperFace.toString()) {
 		case "Raise Brow":
 			faceExpressionData.setRaiseBrow(upperFaceValue);
 			break;
@@ -474,7 +477,7 @@ public class ServerGui extends Thread implements ActionListener {
 
 		faceData.setFaceAffectiveData(faceAffectiveData);
 		faceData.setFaceExpressionData(faceExpressionData);
-		System.out.println(faceData.toString());
+		//System.out.println(faceData.toString());
 
 		return faceData;
 		// System.out.println(faceAffectiveData.toString());
